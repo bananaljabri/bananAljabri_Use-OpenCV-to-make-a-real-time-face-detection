@@ -2,7 +2,7 @@
 
 import cv2
 
-cascade_classifier = cv2.CascadeClassifier('haarcascades/haarcascade_eye.xml')
+cascade_classifier = cv2.CascadeClassifier('C:\Users\TOSHIBA\Downloads\New folder (2)\haarcascades\haarcascade_eye.xml')
 
 cap = cv2.VideoCapture(0)
 
