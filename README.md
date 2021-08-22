@@ -3,11 +3,16 @@
 import cv2
 
 cascade_classifier = cv2.CascadeClassifier('haarcascades/haarcascade_eye.xml')
+
 cap = cv2.VideoCapture(0)
 
+
 while True:
+
     # Capture frame-by-frame
+    
     ret, frame = cap.read()
+    
     # Our operations on the frame come here
     gray = cv2.cvtColor(frame, 0)
     detections = cascade_classifier.detectMultiScale(gray,scaleFactor=1.3,minNeighbors=5)
