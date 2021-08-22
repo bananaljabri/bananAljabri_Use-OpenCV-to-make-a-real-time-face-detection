@@ -1,33 +1,18 @@
 # bananAljabri_Use-OpenCV-to-make-a-real-time-face-detection
+First :
 
-import cv2
+download Python 3.7.3
 
-cascade_classifier = cv2.CascadeClassifier('C:\Users\TOSHIBA\Downloads\New folder (2)\haarcascades\haarcascade_eye.xml')
+https://www.python.org/downloads/release/python-373/
 
-cap = cv2.VideoCapture(0)
+second :
 
+run the completed.py code 
 
-while True:
+finally:
 
-    # Capture frame-by-frame
-    
-    ret, frame = cap.read()
-    
-    # Our operations on the frame come here
-    gray = cv2.cvtColor(frame, 0)
-    detections = cascade_classifier.detectMultiScale(gray,scaleFactor=1.3,minNeighbors=5)
-    if(len(detections) > 0):
-        (x,y,w,h) = detections[0]
-        frame = cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
+When everything done, release the capture by run 
 
-    # for (x,y,w,h) in detections:
-    # 	frame = cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
-
-    # Display the resulting frame
-    cv2.imshow('frame',frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-# When everything done, release the capture
 cap.release()
+
 cv2.destroyAllWindows()
